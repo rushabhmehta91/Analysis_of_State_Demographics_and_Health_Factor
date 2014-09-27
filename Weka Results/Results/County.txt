@@ -1,0 +1,79 @@
+=== Run information ===
+
+Scheme:weka.clusterers.SimpleKMeans -N 10 -A "weka.core.EuclideanDistance -R first-last" -I 500 -S 1
+Relation:     QueryResult-weka.filters.unsupervised.attribute.Remove-R1,3
+Instances:    9423
+Attributes:   6
+              poverty
+              population
+              per_capita_income
+              num_of_death
+              num_of_birth
+Ignored:
+              state
+Test mode:split 66% train, remainder test
+
+=== Model and evaluation on training set ===
+
+
+kMeans
+======
+
+Number of iterations: 33
+Within cluster sum of squared errors: 53.56841475606808
+Missing values globally replaced with mean/mode
+
+Cluster centroids:
+                                     Cluster#
+Attribute              Full Data            0            1            2            3            4            5            6            7            8            9
+                          (9423)       (1620)        (291)         (60)        (229)       (1217)       (1992)        (542)       (1794)        (671)       (1007)
+==================================================================================================================================================================
+poverty                    16.69       11.023      35.2977      16.3463      11.3262      11.7455      19.1379      21.9901      15.8413      10.7879       25.395
+population            98961.3188   62778.4457   51127.6117 2810013.6667  380799.2183   34516.5489   39398.4543  189887.6679   90863.5998  194828.7154   42683.8193
+per_capita_income     43951.3513   49187.2333   34942.3677   52011.9833   83465.0349   37982.2851   36047.0633   53209.7528   44098.5836   62157.0387   34138.7438
+num_of_death           1357.5356     879.0389     703.4192   37018.6167     5647.179     487.1898     568.3173    2380.3893    1246.9593    2672.4098     599.4022
+num_of_birth           3305.6692    2086.4228    1697.5017   95483.5667   13158.8253    1149.5374    1288.9312     6061.583    3025.6823    6597.2563    1416.2949
+
+
+
+
+Time taken to build model (full training data) : 1.45 seconds
+
+=== Model and evaluation on test split ===
+
+kMeans
+======
+
+Number of iterations: 149
+Within cluster sum of squared errors: 37.424068074297274
+Missing values globally replaced with mean/mode
+
+Cluster centroids:
+                                     Cluster#
+Attribute              Full Data            0            1            2            3            4            5            6            7            8            9
+                          (6219)        (209)       (1086)        (313)        (691)        (933)        (135)        (977)       (1373)        (451)         (51)
+==================================================================================================================================================================
+poverty                  16.6922      34.8952      15.8358      23.0681      24.8347       12.133      10.6626      10.7472      18.7946      11.1963      16.1347
+population           100852.9567   42432.7129  116411.3131   173431.754   43230.4226    29154.926  330621.2222   59631.9038   38803.3984  211798.3836 2526728.1569
+per_capita_income      43867.055   34024.9187   45885.6565   52335.6581   34051.4356    38294.627   84024.2519   49108.0379   36463.3664   62425.3082   52683.3529
+num_of_death           1386.1254     639.7799     1591.232    2233.4313     597.0854     407.7846    4817.7259     800.5988     546.5011    2957.6563   34305.5294
+num_of_birth            3406.881    1450.5646    3882.9742    5423.8371    1423.9305     950.0665   12064.3778    1976.3204    1279.5033    7058.2816   90190.3333
+
+
+
+
+Time taken to build model (percentage split) : 4.56 seconds
+
+Clustered Instances
+
+ 0       110 (  3%)
+ 1       500 ( 16%)
+ 2       165 (  5%)
+ 3       364 ( 11%)
+ 4       448 ( 14%)
+ 5        84 (  3%)
+ 6       552 ( 17%)
+ 7       728 ( 23%)
+ 8       235 (  7%)
+ 9        18 (  1%)
+

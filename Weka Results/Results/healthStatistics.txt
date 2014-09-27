@@ -1,0 +1,76 @@
+=== Run information ===
+
+Scheme:weka.clusterers.SimpleKMeans -N 10 -A "weka.core.EuclideanDistance -R first-last" -I 500 -S 1
+Relation:     QueryResult-weka.filters.unsupervised.attribute.Remove-R1,3
+Instances:    9423
+Attributes:   5
+              obesity_rate
+              diabetes_rate
+              excercise_rate
+              no_of_hospitals
+Ignored:
+              state
+Test mode:split 66% train, remainder test
+
+=== Model and evaluation on training set ===
+
+
+kMeans
+======
+
+Number of iterations: 25
+Within cluster sum of squared errors: 55.65719692510047
+Missing values globally replaced with mean/mode
+
+Cluster centroids:
+                               Cluster#
+Attribute          Full Data          0          1          2          3          4          5          6          7          8          9
+                      (9423)      (229)     (1439)      (908)      (589)      (821)      (926)     (1007)     (1839)     (1191)      (474)
+==========================================================================================================================================
+obesity_rate         35.4708    34.9782    34.7853    32.5033    24.1986    37.7698     39.338    40.4995    36.2621    31.1041    43.1624
+diabetes_rate        10.5085     9.8865    11.4719     7.5848     6.8336    13.4616    10.7743    12.3386      9.435     9.4971    15.2363
+excercise_rate        7.8794    37.4585     7.2974     9.6542    13.5518     5.4421     5.1901     4.7587     5.5954    10.6432     2.9304
+no_of_hospitals       4.3744     2.3188     3.9048     4.7676    13.0034     3.1389     2.6598     2.5263     2.9511     7.4106     2.6266
+
+
+
+
+Time taken to build model (full training data) : 0.59 seconds
+
+=== Model and evaluation on test split ===
+
+kMeans
+======
+
+Number of iterations: 18
+Within cluster sum of squared errors: 36.46616262738404
+Missing values globally replaced with mean/mode
+
+Cluster centroids:
+                               Cluster#
+Attribute          Full Data          0          1          2          3          4          5          6          7          8          9
+                      (6219)      (575)      (749)      (923)     (1298)      (165)      (635)      (686)      (295)      (521)      (372)
+==========================================================================================================================================
+obesity_rate         35.4732    38.0487    39.1402    34.4312    35.1857    35.3333    29.4236    40.3469    43.3186    34.3973    24.3844
+diabetes_rate        10.5144    13.4974    10.6529    11.4572     9.5231     9.9758     8.9213     12.309    15.3864     7.6161     6.5887
+excercise_rate        7.9103     5.5009     5.6515     7.6327     6.5031    35.5394    11.2394     4.4854     2.8712      8.144     13.828
+no_of_hospitals       4.4018     3.2191     2.7356     4.2189     3.3975     2.2727       11.4      2.519     2.5525     3.5758     8.6371
+
+
+
+
+Time taken to build model (percentage split) : 0.39 seconds
+
+Clustered Instances
+
+ 0       300 (  9%)
+ 1       385 ( 12%)
+ 2       472 ( 15%)
+ 3       710 ( 22%)
+ 4        86 (  3%)
+ 5       330 ( 10%)
+ 6       355 ( 11%)
+ 7       135 (  4%)
+ 8       263 (  8%)
+ 9       168 (  5%)
+
